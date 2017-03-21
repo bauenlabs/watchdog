@@ -1,9 +1,16 @@
 # Watchdog
-Watchdog is a simple utility to monitor a site's uptime, and alert predefined contacts should an issue arise.
+Watchdog is a simple utility written in Python for monitoring a hostname's uptime, and alerting predefined contacts should an issue arise.
+
+By defualt, it requests a specified URL every 60 seconds, and logs the HTTP status code of the response. If that status is not `200 OK`, Watchdog will place a call via the Twilio API to the current contact number it has defined. This number can be defined either in a shifts.json file, or by passing a contact number as a CLI argument when Watchdog is started. 
+
+# Prerequisties
+- Python 2.7
+- A Valid Twilio Account
+- the `twilio` python module
 
 # Set up
 - Clone this Repository
-- Install twilio python modules: `pip install twilio`
+- Install twilio python module: `pip install twilio`
 - Set the proper environmental variables:
 ```
 $ export WATCHDOG_LOG_FILE="/some/path/status.log"
@@ -24,7 +31,7 @@ to run watchdog while specifying a contact number at runtime:
 
 `$ python watchdog.py +15551234567`
 
-When it executes, it should fork of a daemonized process, print the PID of the new process and other information like so:
+When it executes, it should fork off a daemonized process, print the PID of the new process and other information like so:
 ```
 $ python watchdog.py 
 Daemon PID 16219
