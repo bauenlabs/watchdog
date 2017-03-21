@@ -1,0 +1,33 @@
+{
+  "shifts": {
+    "Monday": {
+      "contact_name": "Grant",
+      "contact_number": "+15559021010"
+    },
+    "Tuesday": {
+      "contact_name": "Patrick",
+      "contact_number": "+15553907620"
+    },
+    "Friday": {
+      "contact_name": "Tyler",
+      "contact_number": "+15559875677"
+    },
+    "Wednesday": {
+      "contact_name": "Grant",
+      "contact_number": "+15553607620"
+    },
+    "Thursday": {
+      "contact_name": "Tyler",
+      "contact_number": "+15552351410"
+    },
+    "Sunday": {
+      "contact_name": "Patrick",
+      "contact_number": "+15553331410"
+    },
+    "Saturday": {
+      "contact_name": "Grant",
+      "contact_number": "+15553947620"
+    }
+  },
+  "generated": "20170320"
+}
